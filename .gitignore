@@ -54,6 +54,15 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
+# PHPStorm
+
+.idea/deployment.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/nekodash.iml
+.idea/vcs.xml
+
+
 # Cursive Clojure plugin
 .idea/replstate.xml
 
