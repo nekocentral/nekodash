@@ -17,8 +17,8 @@
                 <div class="form-group">
                     {{ submit_button("Login", "class" : "btn btn-primary") }}
                 </div>
-                <input type='hidden' name='{{ $this->security->getTokenKey() }}'
-                        value='{{ $this->security->getToken() }}'/>
+                <input type='hidden' name='<?php echo $this->security->getTokenKey() ?>'
+                        value='<?php echo $this->security->getToken() ?>'/>
 
                 {{ end_form() }}
 

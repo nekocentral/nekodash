@@ -47,9 +47,8 @@
                            {{ submit_button("Save", "class" : "btn btn-primary") }}
                         </div>
                     </div>
-                    <input type='hidden' name='{{ echo $this->security->getTokenKey() }}'
-                                            value='{{ echo $this->security->getToken() }}'/>
-
+                    <input type='hidden' name='<?php echo $this->security->getTokenKey() ?>'
+                            value='<?php echo $this->security->getToken() ?>'/>
                 {{ end_form() }}
 
             </div>
