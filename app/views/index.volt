@@ -7,15 +7,10 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Phalcon PHP Framework</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->url->get('img/favicon.ico')?>"/>
     </head>
     <body>
         <div class="container">
-            <?php echo $this->getContent(); ?>
-            <?php echo $this->tag->linkTo(
-    'signup',
-    'Sign Up Here!'
-);?>
+            {{ content() }}
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

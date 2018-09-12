@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use Phalcon\Db\Column;
 use Phalcon\Db\Index;
@@ -6,7 +6,7 @@ use Phalcon\Db\Reference;
 use Phalcon\Mvc\Model\Migration;
 
 /**
- * Class UsersMigration_101
+ * Class UsersMigration_100
  */
 class UsersMigration_101 extends Migration
 {
@@ -23,20 +23,10 @@ class UsersMigration_101 extends Migration
                         'id',
                         [
                             'type' => Column::TYPE_INTEGER,
-                            'unsigned' => true,
                             'notNull' => true,
                             'autoIncrement' => true,
-                            'size' => 10,
+                            'size' => 11,
                             'first' => true
-                        ]
-                    ),
-                    new Column(
-                        'username',
-                        [
-                            'type' => Column::TYPE_VARCHAR,
-                            'notNull' => true,
-                            'size' => 70,
-                            'after' => 'id'
                         ]
                     ),
                     new Column(
@@ -44,8 +34,17 @@ class UsersMigration_101 extends Migration
                         [
                             'type' => Column::TYPE_VARCHAR,
                             'notNull' => true,
-                            'size' => 70,
-                            'after' => 'username'
+                            'size' => 250,
+                            'after' => 'id'
+                        ]
+                    ),
+                    new Column(
+                        'username',
+                        [
+                            'type' => Column::TYPE_VARCHAR,
+                            'notNull' => true,
+                            'size' => 50,
+                            'after' => 'email'
                         ]
                     ),
                     new Column(
@@ -53,16 +52,35 @@ class UsersMigration_101 extends Migration
                         [
                             'type' => Column::TYPE_VARCHAR,
                             'notNull' => true,
-                            'size' => 255,
-                            'after' => 'email'
+                            'size' => 250,
+                            'after' => 'username'
                         ]
                     ),
                     new Column(
-                        'secret',
+                        'first_name',
                         [
                             'type' => Column::TYPE_VARCHAR,
-                            'size' => 255,
+                            'notNull' => true,
+                            'size' => 50,
                             'after' => 'password'
+                        ]
+                    ),
+                    new Column(
+                        'last_name',
+                        [
+                            'type' => Column::TYPE_VARCHAR,
+                            'notNull' => true,
+                            'size' => 50,
+                            'after' => 'first_name'
+                        ]
+                    ),
+                    new Column(
+                        'active',
+                        [
+                            'type' => Column::TYPE_INTEGER,
+                            'notNull' => true,
+                            'size' => 1,
+                            'after' => 'last_name'
                         ]
                     )
                 ],
@@ -71,9 +89,9 @@ class UsersMigration_101 extends Migration
                 ],
                 'options' => [
                     'TABLE_TYPE' => 'BASE TABLE',
-                    'AUTO_INCREMENT' => '2',
+                    'AUTO_INCREMENT' => '1',
                     'ENGINE' => 'InnoDB',
-                    'TABLE_COLLATION' => 'latin1_swedish_ci'
+                    'TABLE_COLLATION' => 'utf8_general_ci'
                 ],
             ]
         );
