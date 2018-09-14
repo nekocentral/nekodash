@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f00182ba18ddfc1f9e7c62e6f9e43030",
-    "packages": [],
+    "content-hash": "8e103d8e71c627c7c528578b14ef42cc",
+    "packages": [
+        {
+            "name": "phalcon/dd",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phalcon/dd.git",
+                "reference": "8d65f2e47bd62eb798b9797624c5be2461788812"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phalcon/dd/zipball/8d65f2e47bd62eb798b9797624c5be2461788812",
+                "reference": "8d65f2e47bd62eb798b9797624c5be2461788812",
+                "shasum": ""
+            },
+            "require": {
+                "ext-phalcon": "^3.0",
+                "php": "^5.4 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Phalcon Team",
+                    "email": "team@phalconphp.com",
+                    "homepage": "http://phalconphp.com/en/team"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/phalcon/dd/graphs/contributors"
+                }
+            ],
+            "description": "This package will add the `dd` and `dump` helpers to your Phalcon application.",
+            "homepage": "https://github.com/phalcon/dd",
+            "keywords": [
+                "VarDumper",
+                "dd",
+                "debug",
+                "dump",
+                "phalcon",
+                "utils"
+            ],
+            "time": "2018-08-13T05:27:52+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "dnoegel/php-xdg-base-dir",
